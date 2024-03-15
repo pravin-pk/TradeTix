@@ -1,7 +1,7 @@
 pipeline {
     agent { 
         node {
-            label 'docker_cloud_machine'
+            label 'docker-alpine-machine'
             }
       }
     triggers {
