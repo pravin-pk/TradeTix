@@ -1,7 +1,5 @@
 pipeline {
-    agent { 
-        label 'docker-node-alpine'
-      }
+    agent any
     triggers {
         pollSCM '*/5 * * * *'
     }
@@ -20,7 +18,7 @@ pipeline {
         }
         stage('Containerize') {
             steps {
-                echo 'Containerizing the application'
+                echo 'npm run build'
                 /* Your steps here, possibly invoking kubectl or helm */
             }
         }
